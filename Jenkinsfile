@@ -27,7 +27,7 @@ pipeline {
         //         }
         //     }
         // }
-        
+        /**
         stage('run unit tests') {
             steps {
                 script {
@@ -35,7 +35,7 @@ pipeline {
                 }
             }
         }
-        
+        **/
         stage('test with sonar') {
             steps {
                 script {
@@ -52,7 +52,7 @@ pipeline {
                 }
             }
         }
-
+        /**
         stage('push to nexus') {
             steps {
                 script {
@@ -61,7 +61,7 @@ pipeline {
                 }
             }
         }
-
+           **/
         stage('build image') {
             steps {
                 script {
