@@ -11,7 +11,7 @@ def runUnitTests() {
 def buildImage() {
     echo "building the docker image..."
     withCredentials([usernamePassword(credentialsId: 'docker-credentials', passwordVariable: 'b@hnJ7uFP3csPz2', usernameVariable: 'hanabenasker')]) {
-        sh 'docker build -t hanaghz/myrepo:${IMAGE_NAME} .'
+        sh 'docker build -t hanabenasker/myrepo:${IMAGE_NAME} .'
         sh "echo $PASS | docker login -u $USER --password-stdin"
         sh 'docker push hanabenasker/myrepo:${IMAGE_NAME}'
     }
