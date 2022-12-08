@@ -12,7 +12,7 @@ def buildImage() {
     echo "building the docker image..."
     withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'b@hnJ7uFP3csPz2', usernameVariable: 'hanabenasker')]) {
         sh 'docker build -t hanabenasker/myrepo:devim .'
-        sh "echo $PASS | docker login -u $USER --password-stdin"
+        sh "echo 'b@hnJ7uFP3csPz2'| docker login -u 'hanabenasker' --password-stdin"
         sh 'docker push hanabenasker/myrepo:devim'
     }
 }
