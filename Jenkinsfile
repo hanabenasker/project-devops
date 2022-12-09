@@ -30,7 +30,7 @@ pipeline {
 
         stage('run unit tests') {
             steps {
-                bat "mvn test"
+                sh "mvn test"
             }
         }
 
@@ -50,7 +50,7 @@ pipeline {
                 }
             }
         }
-        /**
+
         stage('push to nexus') {
             steps {
                 script {
@@ -59,7 +59,7 @@ pipeline {
                 }
             }
         }
-           **/
+
         stage('build image') {
             steps {
                 script {
