@@ -10,10 +10,10 @@ def runUnitTests() {
 
 def buildImage() {
     echo "building the docker image..."
-    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'b@hnJ7uFP3csPz2', usernameVariable: 'hanabenasker')]) {
-        sh 'docker build -t hanabenasker/myrepo:devim .'
-        sh "echo 'b@hnJ7uFP3csPz2'| docker login -u 'hanabenasker' --password-stdin"
-        sh 'docker push hanabenasker/myrepo:devim'
+    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+        sh 'docker build -t hanabenasker/myrepo:${IMAGE_NAME} .'
+        sh "echo $PASS | docker login -u $USER --password-stdin"
+        sh 'docker push hanabenasker/myrepo:${IMAGE_NAME}'
     }
 }
 
