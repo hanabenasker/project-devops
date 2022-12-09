@@ -27,15 +27,13 @@ pipeline {
         //         }
         //     }
         // }
-        /**
+
         stage('run unit tests') {
             steps {
-                script {
-                    gv.runUnitTests()
-                }
+                bat "mvn test"
             }
         }
-        **/
+
         stage('test with sonar') {
             steps {
                 script {
