@@ -27,13 +27,13 @@ pipeline {
         //         }
         //     }
         // }
-
+/*
         stage('run unit tests') {
             steps {
                 sh "mvn test"
             }
         }
-
+*/
         stage('test with sonar') {
             steps {
                 script {
