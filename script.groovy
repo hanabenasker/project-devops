@@ -33,7 +33,7 @@ def pushToNexus() {
     sh 'mvn dependency:resolve'
     sh 'mvn clean deploy -Dmaven.test.skip=true'
 */
-    nexusArtifactUploader artifacts: [[artifactId: 'project-devops', classifier: '', file: 'target/uber.jar', type: 'jar']], credentialsId: 'nexus-auth', groupId: 'com.example', nexusUrl: 'localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'repodev', version: '0.0.1-SNAPSHOT'
+    nexusArtifactUploader artifacts: [[artifactId: 'project-devops', classifier: '', file: 'target/project-devops-0.0.1-SNAPSHOT.jar', type: 'jar']], credentialsId: 'nexus-auth', groupId: 'com.example', nexusUrl: 'localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'repodev', version: '0.0.1-SNAPSHOT'
 }
 
 

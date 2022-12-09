@@ -72,7 +72,7 @@
                             <goal>repackage</goal>
                         </goals>
                         <configuration>
-                            <finalName>Uber</finalName>
+                            <finalName>project-devops-0.0.1-SNAPSHOT</finalName>
                         </configuration>
                     </execution>
                 </executions>
