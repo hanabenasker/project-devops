@@ -2,9 +2,7 @@
 def gv
 
 pipeline {
-    agent {
-        docker {image 'node:16-alphine'}
-    }
+    agent any
     tools {
         maven 'maven'
     }
